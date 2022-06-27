@@ -4,7 +4,7 @@
 #include "Vector.h"
 #include "Color.h"
 #include "Ray.h"
-#include <iostream>
+
 class Object {
 public:
 	enum class ReflType {DIFFUSE, SPECULAR, REFRACTIVE};
