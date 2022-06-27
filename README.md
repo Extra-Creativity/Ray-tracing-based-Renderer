@@ -16,8 +16,8 @@ int height = ...; // height of picture; If you want to get result quickly, we re
 // line 20 - 22, Vector3 Shade(Scene& scene, const Ray& ray, int depth)
 const double stopPossiblity = ...; // R.R. possiblity of stop.
 const int minDepth = ...; // light bounces at least for $minDepth$ times. Before this, R.R. will not trigger.
-// If you want to limit the max bouncing times, you can simply add a constant $maxDepth$ and add some code.
-const int minRefDepth = ...; // For refractive object, path tracing will only choose one way; but ideally there should be at least 2 ways. Thus to make it realistic, we guarantee $minRefDepth$ times 2-way bouncing.
+// If you want to limit the max bouncing times, you can simply add a constant $maxDepth$ and some other code.
+const int minRefDepth = ...; // For a refractive object, path tracing will only choose one way; But ideally there should be at least 2 ways. Thus to make it realistic, we guarantee $minRefDepth$ times 2-way bouncing.
 ```
 
 > In the result picture, we set them as this : 
@@ -35,4 +35,4 @@ const int minRefDepth = ...; // For refractive object, path tracing will only ch
 >
 > It needs about 1 hour to complete on `Intel Core i7`. 
 
-This project needs to set `C++20` and `OpenMP` to compile and run (please use optimization and in `g++` `-O3` is recommended, in `VS2019/MSVC`, `Release` mode is recommended). For `C++20`, we only use `pi` in `<numbers>` and `format` in `<format>`, which can be changed easily if you cannot use`C++20` now. However, at least `C++17` should be supported.
+This project needs to set `C++20` and `OpenMP` to compile and run (Please use optimization. In `g++` , `-O3` is recommended; In `VS2019/MSVC`, `Release` mode is recommended). For `C++20`, we only use `pi` in `<numbers>` and `format` in `<format>`, which can be changed easily if you cannot use`C++20` now. However, at least `C++17` should be supported.
